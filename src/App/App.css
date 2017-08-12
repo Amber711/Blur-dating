@@ -18,7 +18,10 @@
 
 .blur-wrapper {
   width: 375px;
+  height: 663px;
   margin: 0 auto;
+  border: 1px solid red;
+  background-color: rgb(226,235,241);
 }
 
 @keyframes App-logo-spin {
