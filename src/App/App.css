@@ -1,0 +1,27 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #E5686A;
+  height: auto;
+  padding: auto;
+}
+
+.App-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: auto;
+  width: 20%
+}
+
+.blur-wrapper {
+  width: 375px;
+  margin: 0 auto;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
