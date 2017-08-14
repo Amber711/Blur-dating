@@ -31,12 +31,36 @@ class FaceMatches extends React.Component {
     renderFaceClock() {
         let faces = this.state.faceList.map( face => {
             const bgImg = {
+                background: 'no-repeat',
                 backgroundImage: `url('${face}`,
-                width: 30+'%',
+                width: 22+'%',
+                height: 22+'%',
                 position: 'absolute',
-                left: 'calc(50% - 4px)'
+                left: '-webkit-calc(50% - 4px)',
+                top: '-webkit-calc(92% - 4px)'
+            };
+            if(this.state.faceList.indexOf(face) === 0) {
+                bgImg.left = 'calc(43% - 0px)';
+                bgImg.top ='calc(-12%)'
+            }
+            if(this.state.faceList.indexOf(face) === 1){
+                bgImg.left = 'calc(-11% - 4px)';
+                bgImg.top = 'calc(41% - 4px)'
+            };
+            if(this.state.faceList.indexOf(face) === 2){
+
+                bgImg.left = 'calc(93% - 4px)';
+                bgImg.top = 'calc(41% - 4px)';
 
             };
+
+            if(this.state.faceList.indexOf(face) === 3){
+
+                bgImg.left = 'calc(42% - 4px)';
+                bgImg.top = 'calc(92% - 4px)';
+
+            }
+
             return (
                 <li className="face-circle" style={bgImg} key={this.state.faceList.indexOf(face)}>
 

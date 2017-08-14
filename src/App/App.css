@@ -1,5 +1,11 @@
+body {
+  background-color: rgb(226,235,241);
+
+}
+
 .App {
   text-align: center;
+
 }
 
 .App-header {
@@ -24,8 +30,11 @@
   height: 663px;
   */
   margin: 0 auto;
-  border: 1px solid red;
   background-color: rgb(226,235,241);
+}
+
+.container {
+  padding: 80px;
 }
 
 @keyframes App-logo-spin {
