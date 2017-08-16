@@ -53,7 +53,7 @@ class QuestionPanel extends React.Component {
                     <button className="q-btn-left" onClick={() => this.clickChoice()}>{this.state.questions[this.state.index].answer[0]}</button>
                     <button className="q-btn-rt" onClick={() => this.clickChoice()}>{this.state.questions[this.state.index].answer[1]}</button>
                 </div>
-                 <button className="skip-q">SKIP THIS QUESTION</button>
+                 <button className="skip-q" onClick={() => this.clickChoice()}>SKIP THIS QUESTION</button>
            </div>
        )
     }
