@@ -46,6 +46,7 @@
     border: none;
     background-color: rgba(250, 250, 250, 0.8);
     padding-top: 4px;
+    margin-top: 10px;
 }
 .q-wrapper .q-btn-left {
     margin-left: 18px;

@@ -16,8 +16,8 @@ class QuestionPanel extends React.Component {
                 answer: ["Yes", "No"]
             },
             {
-                question: "What do you value most in a friendship?",
-                answer: ["Honesty", "Loyalty"]
+                question: "What kind of music do I prefer?",
+                answer: ["Pop", "Jazz"]
             }
         ],
         index: 0
