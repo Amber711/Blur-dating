@@ -9,6 +9,7 @@ import face3 from '../assets/face3.png';
 import face5 from '../assets/face5.png'
 
 import './FaceMatches.css'
+import QuestionPanel from '../QuestionPanel/QuestionPanel'
 
 class FaceMatches extends React.Component {
     constructor() {
@@ -39,22 +40,19 @@ class FaceMatches extends React.Component {
                 left: '-webkit-calc(50% - 4px)',
                 top: '-webkit-calc(92% - 4px)'
             };
+
             if(this.state.faceList.indexOf(face) === 0) {
                 bgImg.left = 'calc(43% - 0px)';
                 bgImg.top ='calc(-12%)'
-            }
-            if(this.state.faceList.indexOf(face) === 1){
+            } else if(this.state.faceList.indexOf(face) === 1){
                 bgImg.left = 'calc(-11% - 4px)';
                 bgImg.top = 'calc(41% - 4px)'
-            };
-            if(this.state.faceList.indexOf(face) === 2){
+            } else if(this.state.faceList.indexOf(face) === 2){
 
                 bgImg.left = 'calc(93% - 4px)';
                 bgImg.top = 'calc(41% - 4px)';
 
-            };
-
-            if(this.state.faceList.indexOf(face) === 3){
+            } else if(this.state.faceList.indexOf(face) === 3){
 
                 bgImg.left = 'calc(42% - 4px)';
                 bgImg.top = 'calc(92% - 4px)';
@@ -81,6 +79,8 @@ class FaceMatches extends React.Component {
                 <div className="outerCircle"></div>
                 <img alt="" src={face5} className="centerFace"></img>
                 {this.renderFaceClock()}
+
+                    <QuestionPanel />
             </div>
         )
     }
