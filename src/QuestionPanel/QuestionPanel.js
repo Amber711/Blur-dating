@@ -3,9 +3,10 @@ import './QuestionPanel.css'
 import refresh from '../assets/refresh.png'
 
 class QuestionPanel extends React.Component {
+
     constructor() {
         super();
-        this.state = {quesitons : [
+        this.state = {questions : [
             {
                 question: "What is essential to your morning?",
                 answer: ["Coffee", "Breakfast"]
@@ -18,9 +19,25 @@ class QuestionPanel extends React.Component {
                 question: "What do you value most in a friendship?",
                 answer: ["Honesty", "Loyalty"]
             }
-        ]}
-    }
+        ],
+        index: 0
 
+        }
+
+    }
+     clickChoice = () => {
+         console.log('index +++++', this.state.index);
+         if(this.state.index < 2 && this.state.index >= 0) {
+             this.setState({
+                 index: this.state.index + 1
+             })
+         } else {
+             this.setState({
+                 index: this.state.index - 1
+             })
+         }
+
+}
     componentDidMount() {
 
     }
@@ -32,9 +49,9 @@ class QuestionPanel extends React.Component {
                 <img className="refresh" src={refresh} alt=""/>
                 <div className="s-box"></div>
                 <div className="q-wrapper">
-                    <p className="question">{this.state.quesitons.question}</p>
-                    <button className="q-btn-left">{tos.}</button>
-                    <button className="q-btn-rt">Loyalty</button>
+                    <p className="question">{this.state.questions[this.state.index].question}</p>
+                    <button className="q-btn-left" onClick={() => this.clickChoice()}>{this.state.questions[this.state.index].answer[0]}</button>
+                    <button className="q-btn-rt" onClick={() => this.clickChoice()}>{this.state.questions[this.state.index].answer[1]}</button>
                 </div>
                  <button className="skip-q">SKIP THIS QUESTION</button>
            </div>
